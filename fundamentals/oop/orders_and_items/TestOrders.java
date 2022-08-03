@@ -1,71 +1,35 @@
 import java.util.ArrayList;
 public class TestOrders {
     public static void main(String[] args) {
-    
-        // Menu items
-        Items items1 = new Items();
-        items1.name = "mocha";
-        items1.price = 2.5;
-
-        Items items2 = new Items();
-        items2.name= "latte";
-        items2.price = 3.0;
-
-        Items items3 = new Items();
-        items3.name = "drip coffee";
-        items3.price = 1.5;
-
-        Items items4 = new Items();
-        items4.name= "capuccino";
-        items4.price = 4.5;
-    
-        // Order variables -- order1, order2 etc.
-    
-
         Orders order1 = new Orders();
-        order1.name= "Cindihuri";
-        order1.total = 0.00;
-        order1.ready = false;
+        System.out.println(order1.getName());
+        order1.addItems(new Items("Candy", 1.4));
+        order1.addItems(new Items("dog food", 9.99));
 
         Orders order2 = new Orders();
-        order2.name= "Jimmy";
-        order2.total = 0.00;
-        order2.ready = false;
+        System.out.println(order2.getName());
+        order2.addItems(new Items("popscicle", 3.5));
+        order2.addItems(new Items("ice cream", 2.4));
 
-        Orders order3 = new Orders();
-        order3.name= "Noah";
-        order3.total = 0.00;
-        order3.ready = false;
+        Orders order3 = new Orders("Joe");
+        System.out.println(order3.getName());
+        order3.addItems(new Items("pop", 5.0));
+        order3.addItems(new Items("showerhead", 22.4));
+    
+        Orders order4 = new Orders("Jess");
+        System.out.println(order4.getName());
+        order4.addItems(new Items("soap", 1.9));
+        order4.addItems(new Items("rags", 5.5));
+    
+        Orders order5 = new Orders("John");
+        System.out.println(order5.getName());
+        order5.addItems(new Items("Candy", 1.4));
+        order5.addItems(new Items("Sugar", 2.4));
+        order5.setReady(true);
+        System.out.println(order5.getStatus(order5.getReady()));
 
-        Orders order4 = new Orders();
-        order4.name= "Sam";
-        order4.total = 0.00;
-        order4.ready = false;
 
-        order2.items.add(items1);
-        order2.total+= items1.price;
-
-        order3.items.add(items4);
-        order3.total+= items4.price;
-
-        order4.items.add(items2);
-        order4.total+= items2.price;
-
-        order1.ready = true;
-
-        order4.items.add(items2);
-        order4.total+= items2.price;
-
-        order4.items.add(items2);
-        order4.total+= items2.price;
-
-        order2.ready = true;
-        // Application Simulations
-        // Use this example code to test various orders' updates
-        
-        System.out.printf("Name: %s\n", order1.name);
-        System.out.printf("Total: %s\n", order4.total);
-        System.out.printf("Ready: %s\n", order1.ready);
+        order4.display();
     }
 
 }
