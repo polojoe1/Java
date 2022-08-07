@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+	margin: auto;
+	text-align: center;
+	
+}
+.header{
+	color: rgb(206, 156, 166);
+}
+.content{
+	margin: auto;
+	width: 50%;
+	background-color: pink;
+	height: 200px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+table{
+	width: 100%;
+}
+td{
+	background-color: white;
+}
