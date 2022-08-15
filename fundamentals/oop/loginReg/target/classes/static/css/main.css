@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.content{
+	display: flex;
+	width:100%;
+	height:100%;
+	justify-content: space-around;
+}
+
+.register {
+	width: 40%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+}
+
+.login {
+	width: 40%;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+}
